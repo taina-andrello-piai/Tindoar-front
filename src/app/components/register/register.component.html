@@ -1,0 +1,47 @@
+<div class="fundo">
+<form>
+    <h1>Realize o cadastro</h1>
+    <h2>Choose a username</h2>
+    <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.username" [formControl]="username" required type="text" name="username" placeholder="example_user" maxlength="20">
+        <mat-error *ngIf="username.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <h2>Enter your name</h2>
+    <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.nome" [formControl]="nome" required type="text" name="nome" placeholder="Example User"maxlength="50">
+        <mat-error *ngIf="nome.invalid">{{ getMessage() }}</mat-error>
+      </mat-form-field>
+    
+      <h2>Enter your e-mail</h2>
+      <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.email" [formControl]="email" required type="email" name="email" placeholder="example@email.com"maxlength="50">
+        <mat-error *ngIf="email.invalid">{{ getMessage() }}</mat-error>
+      </mat-form-field>
+
+      <h2>Enter your whatsapp</h2>
+      <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.whatsapp" [formControl]="whatsapp" required type="text" name="whatsapp" placeholder="1199999999" maxlength="14">
+        <mat-error *ngIf="whatsapp.invalid">{{ getMessage() }}</mat-error>
+      </mat-form-field>
+
+      <h2>Enter your social network</h2>
+      <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.rede_social" [formControl]="rede_social" required type="text" name="rede_social" placeholder="facebook.com/user" maxlength="50">
+        <mat-error *ngIf="rede_social.invalid">{{ getMessage() }}</mat-error>
+      </mat-form-field>
+
+      <h2>Choose a password</h2>
+      <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.password" [formControl]="password" required [type]="hide ? 'password' : 'text'" name="password" placeholder="**********" maxlength="120">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="onSubmit()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button color="primary">SIGN UP</button>
+    </div>
+</form>
+</div>

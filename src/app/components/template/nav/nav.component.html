@@ -1,0 +1,47 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened>
+        
+        <mat-nav-list *ngIf="isLoggedIn">
+            <a routerLink="/home" mat-list-item>
+                <i class="material-icons">home</i>
+                Home
+            </a>
+        </mat-nav-list>
+        
+        <mat-nav-list *ngIf="!isLoggedIn">
+            <a routerLink="/login" mat-list-item>
+                <i class="material-icons">login</i>
+                Login
+            </a>
+            <a routerLink="/register" mat-list-item>
+                <i class="material-icons">person_add</i>
+                Sign Up
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list *ngIf="isLoggedIn">
+            <div class="account_circle">
+            <!--<a  mat-list-item> [routerLink]="['/user', username]"-->
+                <i class="material-icons">account_circle</i>
+                {{ username }}
+            <!-- </a> -->
+            </div>
+<!--            <a *ngIf="showAdminBoard" mat-list-item>
+                <i class="material-icons">face</i>
+                User 
+            </a>
+            <a [routerLink]="['/booking', username]" mat-list-item>
+                <i class="material-icons">edit_calendar</i>
+                Book a table
+            </a>-->
+            <a (click)="logout()" mat-list-item>
+                <i class="material-icons">logout</i>
+                Logout
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

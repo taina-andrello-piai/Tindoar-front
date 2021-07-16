@@ -1,0 +1,18 @@
+
+.header {
+    justify-content: center;
+    height: 13%;
+    background-color: rgb(248, 184, 8);
+    
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: white;
+}

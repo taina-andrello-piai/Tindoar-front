@@ -1,0 +1,27 @@
+<div class="fundo">
+<form>
+    <h1>Realize o Login</h1>
+    <h2>Enter your username</h2>
+    <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.username" [formControl]="username" required type="text" name="username" placeholder="username" maxlength="20">
+        <mat-error *ngIf="username.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <h2>Enter your password</h2>
+    <mat-form-field appearance="standard" class="form">
+        <input matInput [(ngModel)]="form.password" [formControl]="password" required [type]="hide ? 'password' : 'text'" name="password" maxlength="120">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+ <!--   <div class="links">
+        <a href="/forgot-password">Esqueceu sua senha?</a>
+    </div> -->
+
+    <div class="buttons">
+        <button (click)="onSubmit()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button>LOGIN</button>
+    </div>
+</form>
+</div>
