@@ -11,7 +11,7 @@
     <mat-form-field appearance="standard" class="form">
         <input matInput [(ngModel)]="form.password" [formControl]="password" required [type]="hide ? 'password' : 'text'" name="password" maxlength="120">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+            <mat-icon class="visibility">{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
         </button>
         <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
@@ -21,7 +21,7 @@
     </div> -->
 
     <div class="buttons">
-        <button (click)="onSubmit()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button>LOGIN</button>
+        <button (click)="onSubmit()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button color="primary">LOGIN</button>
     </div>
 </form>
 </div>

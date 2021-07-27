@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
     nome: '',
     email: '',
     whatsapp: '',
-    rede_social: '',
+    redeSocial: '',
     password: ''
   };
 
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   nome = new FormControl('', [Validators.minLength(3)]);
   email = new FormControl('', [Validators.required, Validators.email]);
   whatsapp = new FormControl('', [Validators.minLength(3)]);
-  rede_social = new FormControl('', [Validators.minLength(3)]);
+  redeSocial = new FormControl('', [Validators.minLength(3)]);
   password = new FormControl('', [Validators.minLength(6)]);
 
   isSuccessful = false;
@@ -37,9 +37,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const {username, nome, email, whatsapp, rede_social, password } = this.form;
+    const {username, nome, email, whatsapp, redeSocial, password } = this.form;
 
-    this.authService.register(username, nome, email, whatsapp, rede_social, password).subscribe(
+    this.authService.register(username, nome, email, whatsapp, redeSocial, password).subscribe(
       data => {
         console.log(data);
         this.isSuccessful = true;
@@ -69,6 +69,10 @@ export class RegisterComponent implements OnInit {
 
     if(this.password.invalid) {
       return 'O campo password deve conter entre 6 e 120 caracteres';
+    }
+
+    if(this.redeSocial.invalid) {
+      return 'O campo Rede Social deve conter entre 6 e 120 caracteres';
     }
     return false;
   }

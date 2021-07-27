@@ -23,6 +23,9 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { ProdutoComponent } from './components/produto/produto.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { ProdutoPostComponent } from './components/produto-post/produto-post.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import { MatInputModule } from '@angular/material/input';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProdutoComponent,
+    PostsComponent,
+    ProdutoPostComponent,
+
   ],
   imports: [
     BrowserModule,

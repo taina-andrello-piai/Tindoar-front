@@ -27,8 +27,8 @@
 
       <h2>Enter your social network</h2>
       <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.rede_social" [formControl]="rede_social" required type="text" name="rede_social" placeholder="facebook.com/user" maxlength="50">
-        <mat-error *ngIf="rede_social.invalid">{{ getMessage() }}</mat-error>
+        <input matInput [(ngModel)]="form.redeSocial" [formControl]="redeSocial" required type="text" name="redeSocial" placeholder="facebook.com/user" maxlength="50">
+        <mat-error *ngIf="redeSocial.invalid">{{ getMessage() }}</mat-error>
       </mat-form-field>
 
       <h2>Choose a password</h2>

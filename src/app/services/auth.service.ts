@@ -23,13 +23,13 @@ export class AuthService {
     }, httpOptions)
   }
 
-  register(username: string, nome: string, email: string, whatsapp: string, rede_social: string, password: string): Observable<any> {
+  register(username: string, nome: string, email: string, whatsapp: string, redeSocial: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'signup', {
       username,
       nome,
       email,
       whatsapp,
-      rede_social,
+      redeSocial,
       password
     }, httpOptions);
   }

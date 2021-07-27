@@ -10,7 +10,7 @@ h1 {
     text-align: center;
     margin-bottom: 2rem;
     padding-top: 2rem;
-    color:white;
+    color:black;
 }
 
 .form {
@@ -36,7 +36,7 @@ h2 {
     margin-top: 2rem;
     margin-bottom: -0.4rem;
     text-align:justify;
-    color: white;
+    color: black;
 }
 
 input {
@@ -51,7 +51,13 @@ input {
 }
 
 .fundo {
-    background-color:black;
+    background-color:white;
     margin-top: -1rem;
     padding-bottom: 13rem;
+}
+
+
+
+.visibility {
+    color:goldenrod;
 }

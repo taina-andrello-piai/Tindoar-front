@@ -1,0 +1,37 @@
+<h1>Cadastre seu novo produto aqui!</h1>
+
+<mat-form-field class="form">
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="produto.nome" [formControl]="nome" required type="text" name="nome" placeholder="Ex.: Sofá" >
+    <!-- <mat-error *ngIf=""> {{ getMessage() }}</mat-error> -->
+</mat-form-field>
+
+<mat-form-field class="form">
+    <mat-label>Categoria</mat-label>
+    <input matInput [(ngModel)]="produto.categoria" [formControl]="categoria" required type="text" name="categoria" placeholder="Ex.: Mobília">
+    <!-- <mat-error *ngIf=""> {{ getMessage() }}</mat-error> -->
+</mat-form-field>
+
+<mat-form-field class="form">
+    <mat-label>Estado do produto</mat-label>
+    <input matInput [(ngModel)]="produto.estado" [formControl]="estado" required type="text" name="estado" placeholder="Ex.: Novo">
+    <!-- <mat-error *ngIf=""> {{ getMessage() }}</mat-error> -->
+</mat-form-field>
+
+<mat-form-field class="form">
+    <mat-label>Cidade</mat-label>
+    <input matInput [(ngModel)]="produto.cidade" [formControl]="cidade" required type="text" name="cidade" placeholder="Ex.: São Carlos-SP">
+    <!-- <mat-error *ngIf=""> {{ getMessage() }}</mat-error> -->
+</mat-form-field>
+
+<mat-form-field class="form">
+    <mat-label>Descrição</mat-label>
+    <input matInput [(ngModel)]="produto.descricao" [formControl]="descricao" required type="text" name="descricao" placeholder="Ex.: Produto novo na cor verde sem nenhum rasgo, porém possui manchas." >
+    <!-- <mat-error *ngIf=""> {{ getMessage() }}</mat-error> -->
+</mat-form-field>
+
+<div class="buttons">
+    <button (click)="create()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button>CRIAR</button>
+    <button (click)="cancelar()" class="mat-elevation-z8" mat-stroked-button>CANCELAR</button>
+</div>
+

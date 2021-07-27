@@ -34,6 +34,6 @@ export class NavComponent implements OnInit {
 
   logout(): void {
     this.tokenStorageService.signOut();
-    window.location.href = "/home";
+    window.location.href = "";
   }
 }

@@ -36,4 +36,7 @@ export class HomeComponent implements OnInit {
     
   }
 
+  goToPosts(): void {
+    window.location.href = "/posts";
+  }
 }
