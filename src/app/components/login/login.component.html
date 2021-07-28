@@ -1,10 +1,9 @@
-<mat-sidenav-content>
 <div class="fundo">
     <div class="fundoVerde">
     
     <form>
         <h1>Entrar</h1>
-        <img src="./assets/logo1.png" width = "200">
+        <img src="./assets/logo1.png" width = "170">
         <h2>Insira nome de usuario</h2>
         <mat-form-field appearance="standard" class="form">
             <input matInput [(ngModel)]="form.username" [formControl]="username" required type="text" name="username" placeholder="usuario" maxlength="20">
@@ -25,9 +24,9 @@
         </div> -->
     
         <div class="buttons">
-            <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary" mat-stroked-button color="primary">Entrar no sistema</button>
+            <!-- <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary" mat-stroked-button color="primary">Entrar no sistema</button> -->
+            <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary">Entrar no sistema</button>
         </div>
     </form>
     </div>
     </div>
-</mat-sidenav-content>

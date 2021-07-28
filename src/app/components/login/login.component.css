@@ -71,8 +71,8 @@ input {
     font-size: 0.8rem;
 }
 
-/*.fundo {
-    background-color:white;
+.fundo {
+    /*background-color:white;*/
     height: 100%;
     width: 100%;
     display: flex;
@@ -80,11 +80,11 @@ input {
     align-items: center;
     justify-content: center;
 
-}*/
+}
 
 .fundoVerde{
     /*background-color: rgba(0, 165, 84, 0.47);*/
-    height: 32rem;
+    height: 28rem;
     width: 40rem;
     display: flex;
     flex-direction: column;
