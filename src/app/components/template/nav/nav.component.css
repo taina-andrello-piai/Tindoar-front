@@ -21,7 +21,7 @@ i {
 .fundo{
     background-color: rgba(0, 165, 84, 0.47);
     height: 100%;
-    padding: 3rem;
+    /*padding: 3rem;*/
     flex-direction: row;
     justify-content: center;
     align-items: center;

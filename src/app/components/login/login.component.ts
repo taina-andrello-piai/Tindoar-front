@@ -69,5 +69,9 @@ export class LoginComponent implements OnInit {
     return false;
   }
 
+  onCancelarClicked(): void {
+    window.history.back();
+  }
+
 }
 

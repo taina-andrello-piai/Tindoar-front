@@ -78,4 +78,8 @@ export class RegisterComponent implements OnInit {
     }
     return false;
   }
+
+  onCancelarClicked(): void {
+    window.history.back();
+  }
 }

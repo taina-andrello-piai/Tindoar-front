@@ -1,50 +1,60 @@
-<mat-sidenav-content class="conteudo">
+<div class="conteudo">
 <div class="fundoVerde">
 <form>
     <h1>Realize o cadastro</h1>
-    <img src="./assets/logo1.png" width = "200">
-    <h2>Escolha seu nome de usuário</h2>
-    <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.username" [formControl]="username" required type="text" name="username" placeholder="example_user" maxlength="20">
-        <mat-error *ngIf="username.invalid">{{ getMessage() }}</mat-error>
-    </mat-form-field>
-
-    <h2>Nome</h2>
-    <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.nome" [formControl]="nome" required type="text" name="nome" placeholder="Example User"maxlength="50">
-        <mat-error *ngIf="nome.invalid">{{ getMessage() }}</mat-error>
-      </mat-form-field>
+    <img src="./assets/logo1.png" width = "140">
+    <div style="display: flex; flex-direction: row; gap:2rem;">
+      <div>
+        <h2>Escolha seu nome de usuário</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.username" [formControl]="username" required type="text" name="username" placeholder="example_user" maxlength="20">
+          <mat-error *ngIf="username.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
     
-      <h2>E-mail</h2>
-      <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.email" [formControl]="email" required type="email" name="email" placeholder="example@email.com"maxlength="50">
-        <mat-error *ngIf="email.invalid">{{ getMessage() }}</mat-error>
-      </mat-form-field>
+        <h2>Nome</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.nome" [formControl]="nome" required type="text" name="nome" placeholder="Example User"maxlength="50">
+          <mat-error *ngIf="nome.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
+        
+        <h2>E-mail</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.email" [formControl]="email" required type="email" name="email" placeholder="example@email.com"maxlength="50">
+          <mat-error *ngIf="email.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <h2>Whatsapp</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.whatsapp" [formControl]="whatsapp" required type="text" name="whatsapp" placeholder="1199999999" maxlength="14">
+          <mat-error *ngIf="whatsapp.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
 
-      <h2>Whatsapp</h2>
-      <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.whatsapp" [formControl]="whatsapp" required type="text" name="whatsapp" placeholder="1199999999" maxlength="14">
-        <mat-error *ngIf="whatsapp.invalid">{{ getMessage() }}</mat-error>
-      </mat-form-field>
+        <h2>Rede Social</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.redeSocial" [formControl]="redeSocial" required type="text" name="redeSocial" placeholder="facebook.com/user" maxlength="50">
+          <mat-error *ngIf="redeSocial.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
 
-      <h2>Rede Social</h2>
-      <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.redeSocial" [formControl]="redeSocial" required type="text" name="redeSocial" placeholder="facebook.com/user" maxlength="50">
-        <mat-error *ngIf="redeSocial.invalid">{{ getMessage() }}</mat-error>
-      </mat-form-field>
+        <h2>Senha</h2>
+        <mat-form-field appearance="standard" class="form">
+          <input matInput [(ngModel)]="form.password" [formControl]="password" required [type]="hide ? 'password' : 'text'" name="password" placeholder="**********" maxlength="120">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    
 
-      <h2>Senha</h2>
-      <mat-form-field appearance="standard" class="form">
-        <input matInput [(ngModel)]="form.password" [formControl]="password" required [type]="hide ? 'password' : 'text'" name="password" placeholder="**********" maxlength="120">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
-        </button>
-        <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
-    </mat-form-field>
+      
 
-    <div class="buttons">
-        <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary" mat-stroked-button color="primary">Cadastrar</button>
+    <div class="buttons" style="display: flex; flex-direction: row; gap:2rem;">
+        <!-- <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary" mat-stroked-button color="primary">Cadastrar</button>-->
+        <button (click)="onCancelarClicked()" class="buttonCancelar" >Cancelar</button>
+        <button (click)="onSubmit()" [disabled]="getMessage()" class="buttonPrimary">Cadastrar</button>
     </div>
 </form>
 </div>
-</mat-sidenav-content>
+</div>

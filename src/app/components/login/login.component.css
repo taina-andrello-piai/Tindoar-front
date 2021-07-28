@@ -47,6 +47,9 @@ button {
     border-radius: 1.5rem;
 }
 
+.buttonPrimary:hover{
+    cursor: pointer;
+}
 
 
 h2 {

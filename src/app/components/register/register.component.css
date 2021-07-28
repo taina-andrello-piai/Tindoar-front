@@ -1,6 +1,6 @@
 form {
     text-align: center;
-    width: 34%;
+    /*width: 34%;*/
     margin: auto;
 }
 
@@ -9,7 +9,7 @@ h1 {
     font-weight: 170;
     text-align: center;
     margin-bottom: 2rem;
-    padding-top: 2rem;
+    /*padding-top: 2rem;*/
     color: white;
     font-family: Averta Demo PE;
 }
@@ -25,6 +25,12 @@ h1 {
     width: 100%;
     text-align: start;
     margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: -1rem;
 }
 
 button {
@@ -67,10 +73,10 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 .conteudo {
-    margin-top: 20rem;
+    /*margin-top: 20rem;*/
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     
@@ -81,4 +87,19 @@ input {
     background-color: #2E42F2;
     height: 2.5rem;
     border-radius: 1.5rem;
+}
+
+.buttonCancelar{
+    background-color: gray;
+    color: white;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.buttonPrimary:hover{
+    cursor: pointer;
+}
+
+.buttonCancelar:hover{
+    cursor: pointer;
 }
