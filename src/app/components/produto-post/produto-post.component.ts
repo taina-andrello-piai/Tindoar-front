@@ -37,8 +37,9 @@ export class ProdutoPostComponent implements OnInit {
 
   create(): void {
     this.service.create(this.produto).subscribe((_resposta) => {
-      this.router.navigate(['produtos'])
+      //this.router.navigate(['produtos'])
       this.service.mensagem('Produto cadastrado com sucesso!');
+      window.history.back();
     }, err => {
       for(let i = 0; i< err.error.errors.length; i++) {
         this.service.mensagem(err.error.errors[i].message)
@@ -53,4 +54,5 @@ export class ProdutoPostComponent implements OnInit {
   getMessage() {
     return false;
   }
+
 }

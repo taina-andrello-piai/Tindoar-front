@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   showAdminBoard = false;
   showUserBoard = false;
   username?: string;
+  showStartBoard = false;
 
   constructor(private userService: UserService, private tokenStorageService: TokenStorageService) { }
 

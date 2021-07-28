@@ -11,6 +11,8 @@ export class RegisterComponent implements OnInit {
 
   hide = true;
 
+  showStartBoard = false;
+  
   form: any = {
     username: '',
     nome: '',

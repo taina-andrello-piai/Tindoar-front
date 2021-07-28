@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string = '';
+  showStartBoard = true;
 
   constructor(private tokenStorageService: TokenStorageService, private router: Router) { }
 

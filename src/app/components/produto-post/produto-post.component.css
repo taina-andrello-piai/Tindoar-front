@@ -8,14 +8,16 @@ h1 {
     font-size: 1.4rem;
     font-weight: 170;
     text-align: center;
-    margin-bottom: 2rem;
-    padding-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 0.8rem;
+    color: white;
 }
 
 .form { 
     height: 2rem;
     margin: 1rem;
     display:contents;
+    
 }
 
 .buttons {
@@ -40,7 +42,7 @@ h2 {
 
 input {
     padding: 0.5rem;
-    background-color: khaki;
+    background-color: white;
     border-radius: 0.6rem;
     /*background-color: lightcoral;*/
 }
@@ -51,5 +53,10 @@ input {
 
 .fundo {
     background-color:white;
-    margin-top: -1rem;
+}
+
+.conteudo {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    /*background-color: rgba(0, 165, 84, 0.47);*/
 }

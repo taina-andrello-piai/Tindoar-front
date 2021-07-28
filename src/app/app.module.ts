@@ -10,7 +10,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavComponent } from './components/template/nav/nav.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
@@ -26,6 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ProdutoComponent } from './components/produto/produto.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { ProdutoPostComponent } from './components/produto-post/produto-post.component';
+import { LoginComponent } from './components/login/login.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProdutoPostComponent } from './components/produto-post/produto-post.com
     ProdutoComponent,
     PostsComponent,
     ProdutoPostComponent,
+    InicioComponent,
 
   ],
   imports: [

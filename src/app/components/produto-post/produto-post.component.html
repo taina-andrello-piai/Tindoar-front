@@ -1,5 +1,5 @@
 <h1>Cadastre seu novo produto aqui!</h1>
-
+<div class="conteudo">
 <mat-form-field class="form">
     <mat-label>Nome</mat-label>
     <input matInput [(ngModel)]="produto.nome" [formControl]="nome" required type="text" name="nome" placeholder="Ex.: Sofá" >
@@ -33,5 +33,6 @@
 <div class="buttons">
     <button (click)="create()" [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button>CRIAR</button>
     <button (click)="cancelar()" class="mat-elevation-z8" mat-stroked-button>CANCELAR</button>
+</div>
 </div>
 

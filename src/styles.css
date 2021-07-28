@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* { margin: 0; font-family: Averta Demo PE }
+
+@font-face {font-family: "Averta Demo PE"; 
+    src: url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.eot"); 
+    src: url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/6005d17c8b0c8485d42b35493703ee4d.svg#Averta Demo PE") format("svg"); }

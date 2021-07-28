@@ -1,6 +1,6 @@
 form {
     text-align: center;
-    width: 30%;
+    width: 34%;
     margin: auto;
 }
 
@@ -10,11 +10,15 @@ h1 {
     text-align: center;
     margin-bottom: 2rem;
     padding-top: 2rem;
+    color: white;
+    font-family: Averta Demo PE;
 }
 
 .form {
     width: 100%; 
     height: 2rem;
+    color: #2E42F2;
+
 }
 
 .buttons {
@@ -35,11 +39,13 @@ h2 {
     margin-top: 2rem;
     margin-bottom: -0.4rem;
     text-align:justify;
+    color: white;
+    font-family: Averta Demo PE;
 }
 
 input {
     padding: 0.5rem;
-    background-color: khaki;
+    background-color: white;
     border-radius: 0.6rem;
     /*background-color: lightcoral;*/
 }
@@ -48,7 +54,31 @@ input {
     font-size: 0.8rem;
 }
 
-.fundo {
+/*.fundo {
     background-color:white;
     margin-top: -1rem;
+}*/
+
+.fundoVerde{
+    /*background-color: rgba(0, 165, 84, 0.47);*/
+    height: 100%;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+.conteudo {
+    margin-top: 20rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    
+}
+
+.buttonPrimary{
+    color: white;
+    background-color: #2E42F2;
+    height: 2.5rem;
+    border-radius: 1.5rem;
 }

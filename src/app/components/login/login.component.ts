@@ -12,6 +12,7 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
 export class LoginComponent implements OnInit {
 
   hide = true;
+  showStartBoard = false;
 
   form: any = {
     username: '',
@@ -54,7 +55,7 @@ export class LoginComponent implements OnInit {
   }
 
   redirectPage(username: string): void {
-    window.location.href = `/home`; //user/${username}
+    window.location.href = `/home`; //user/${username} ta pegando com a autenticação??? no meu pc nao esta indo
   }
 
   getMessage() {
@@ -69,3 +70,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
+

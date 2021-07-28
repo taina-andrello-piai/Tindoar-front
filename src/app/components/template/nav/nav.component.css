@@ -1,5 +1,6 @@
 .container {
     height: 80%;
+    color: #2E42F2;
 }
 
 i {
@@ -13,5 +14,24 @@ i {
 }
 
 .mat-sidenav {
-    background-color: rgb(233, 220, 102);
+    background-color: rgba(31, 177, 219, 0.26);
+    color: #2E42F2;
+}
+
+.fundo{
+    background-color: rgba(0, 165, 84, 0.47);
+    height: 100%;
+    padding: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+img{
+    width: 200px;
+    margin: 50px;
+}
+
+.conteudo {
+    display:block;
 }
